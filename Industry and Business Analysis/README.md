@@ -6,7 +6,7 @@
 
 | # | 문서 | 상태 |
 | --- | --- | --- |
-| 01 | Porter's Five Forces 모델 | 🔵 Next |
+| 01 | [Porter's Five Forces 모델](<./01 - Porter's Five Forces 모델.md>) | 🟡 검토 대기 |
 | 02 | 기업 내부 활동의 가치사슬 분석 | ⬜ 예정 |
 | 03 | 핵심 성공 요인(KSFs, Key Success Factors) 분석 | ⬜ 예정 |
 | 04 | TAM-SAM-SOM 과 Market Segment Map | ⬜ 예정 |
@@ -14,4 +14,4 @@
 | 06 | 시장기회 분석 : 기회점수(OS) 기반 우선순위 판단 | ⬜ 예정 |
 | 07 | 고객 상황을 객관화하는 JTBD(Jobs-To-Be-Done) 분석 | ⬜ 예정 |
 
-> 상태 표기: 🔵 Next(진행 예정) · ⬜ 예정(대기) · ✅ 완료
+> 상태 표기: 🔵 Next(진행 예정) · 🟡 검토 대기(초안 작성 완료, 사용자 확인 전) · ⬜ 예정(대기) · ✅ 완료
