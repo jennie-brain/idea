@@ -8,6 +8,7 @@
 | --- | --- |
 | [`research DB/`](./research%20DB) | AI 딥리서치(Deep Research) 산출물 모음 |
 | [`proposal/`](./proposal) | 프로젝트 기획서(제안서) 초안 및 버전 관리 |
+| [`Industry and Business Analysis/`](<./Industry and Business Analysis>) | Porter's Five Forces 등 산업·비즈니스 분석 단계별 산출물 |
 
 ---
 
