@@ -6,8 +6,8 @@
 
 | # | 문서 | 상태 |
 | --- | --- | --- |
-| 01 | [Porter's Five Forces 모델](<./01 - Porter's Five Forces 모델.md>) | 🟡 검토 대기 |
-| 02 | 기업 내부 활동의 가치사슬 분석 | ⬜ 예정 |
+| 01 | [Porter's Five Forces 모델](<./01 - Porter's Five Forces 모델.md>) | ✅ 완료 |
+| 02 | [기업 내부 활동의 가치사슬 분석](<./02 - 기업 내부 활동의 가치사슬 분석.md>) | 🟡 검토 대기 |
 | 03 | 핵심 성공 요인(KSFs, Key Success Factors) 분석 | ⬜ 예정 |
 | 04 | TAM-SAM-SOM 과 Market Segment Map | ⬜ 예정 |
 | 05 | 페르소나, 페르소나 스펙트럼, 고객 여정지도 | ⬜ 예정 |
