@@ -1,0 +1,202 @@
+# 07-3. JTBD 인터뷰 결과 보고서 작성법 및 사전 요약카드 — 미래지출 카드결제 설계 서비스
+
+> **관련 문서:** [`07`](<./07 - JTBD 분석.md>) · [`07-1`](<./07-1 - JTBD 인터뷰 종합 계획서.md>) · [`07-2`](<./07-2 - 데모체험 인터뷰 문항지.md>)
+> **분석 기준일:** 2026-08-14
+
+> **상태 표기** — ⚠️ **이 문서는 실제 인터뷰 결과 보고서가 아니다.** 인터뷰가 아직 수행되지 않았으므로, "Evidence"와 "실측 Priority"는 전부 빈칸이다. 나머지 필드(Situation·Job Statement·4 Forces 등)는 05~07단계에서 이미 확보한 가설(🟡)로 미리 채워, 실제 인터뷰가 끝나는 즉시 Evidence·Priority만 덧붙이면 되도록 준비했다.
+
+### Decision Log
+
+| 날짜 | 결정 | 이유 |
+|---|---|---|
+| 2026-08-14 | 사용자가 제시한 결과 보고서 필드표·요약카드 예시를 방법론(§1~2)으로 formal화하고, 실제 적용은 "결과 보고서"가 아니라 **"사전 요약카드"** 로 명명 | 인터뷰를 아직 수행하지 않은 상태에서 "결과 보고서"라는 이름을 쓰면 실제 데이터가 있는 것처럼 오인될 위험이 있음 |
+| 2026-08-14 | Priority 필드의 모수를 사용자 원문의 **TAM(%)** 대신 **SAM(확인된 헤드카운트)** 으로 유지 | 07단계에서 이미 확정한 원칙 — TAM(마이데이터 이용자 약 3,000만 명) 기준으로 모수를 잡으면 변별력이 0에 수렴함(06단계 §3) |
+| 2026-08-14 | 07-2의 9개 대상자(1~8순위 + Non-user 대조군) 전원에 대해 카드를 미리 만들되, Evidence는 전부 공란으로 남김 | 인터뷰 완료 후 이 카드에 그대로 덧붙여 쓸 수 있게 준비 — 빈칸을 그럴듯한 숫자로 메우지 않는다는 07단계 원칙을 유지 |
+
+---
+
+## 1. 방법론 — 결과 보고서 필드 정의
+
+| 필드 | 작성 가이드 |
+|---|---|
+| Persona / Segment | 핵심(Core)·확장(Adjacent)·극단(Extreme)·비활성(Non-user) 중 분류 + 짧은 설명(직무/맥락) |
+| Situation (When…) | 전환을 유발한 상황적 맥락 한 문장 |
+| Job Statement (…I want to…) | 사용자가 해결하려는 핵심 일(진보) 한 문장 |
+| Desired Outcome (…so I can…) | 달성하고 싶은 결과(측정 가능 표현) |
+| 4 Forces | Push(현상 불만)·Pull(새 솔루션 매력)·Habit(관성)·Anxiety(불안) 각 1~2줄 |
+| Current Solutions/Workarounds | 현재 쓰는 대체수단 |
+| Switch Triggers/Barriers | 채택·이탈을 유발한 계기와 장애요인 |
+| Evidence(Quotes/Data) | 인터뷰 인용 1~2개 + 로그·지표·리뷰 근거 |
+| Priority(AOS/DOS) | AOS = Imp×(1−Sat/5), DOS = (Imp−Sat)×**MR(SAM 기준)** — 모수를 반드시 명시 |
+| Notes | 실험 아이디어, 리스크, 추정 가설 |
+
+## 2. 요약 카드 작성 예시 (원문 참고용 — 타 도메인 예시 그대로 보존)
+
+| 구분 | 내용 |
+|---|---|
+| Persona/Segment | 코어 — 초기 단계 B2B SaaS 비즈니스의 운영 매니저(5~20명 조직) |
+| Situation | 월말 경영회의를 48시간 앞둔 상황 |
+| Job Statement | 지표를 한 번에 모아 경영진용 리포트를 신뢰성 있게 제출하고자 함 |
+| Desired Outcome | 에러 0건, 취합 시간 4시간 → 30분 단축, 승인 1회 통과 |
+| 4 Forces | Push: 수작업 취합 스트레스 / Pull: 자동 수집·요약 기대 / Habit: 스프레드시트 중심 업무 / Anxiety: 새 툴 보안·권한 이슈 |
+| Current Solutions | Google Sheet + 수동 CSV 업로드 + Slack 요청 |
+| Switch Triggers/Barriers | Trigger: CFO의 "오탈자 지적" 이후 탐색 시작 / Barrier: 보안·권한 이슈로 도입 보류 |
+| Evidence | "전표가 늦게 들어와 엑셀을 다시 합쳐요." / 지난 3개월 평균 취합시간 5.6시간 |
+| Priority | AOS 3.0, DOS 2.4(Imp 5, Sat 2, MR 0.8) |
+| Notes | MVP: 3소스 연결·자동요약·PDF 내보내기, SSO 통합 필수 |
+
+---
+
+## 3. 우리 서비스 — 사전 요약카드 (9개 대상, Evidence 전부 공란)
+
+### 3.1 1순위 — 김지은형(Core)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 예식 3개월 전, 가전·가구 목록·예산을 처음 정리하는 시점 |
+| Job Statement | 여러 구매건을 어떤 카드로 나눠 결제할지 한 번에 확인하고 싶다 |
+| Desired Outcome | 지출계획 입력 후 [O분] 안에 카드별 배분안 확인, 놓친 혜택 [0]건 *(수치는 인터뷰 후 확정)* |
+| 4 Forces | Push: 지출이 흩어져 전체를 못 봄(C1-P1) / Pull: 카드조합·구매건별 배분 제시(C1-P2) / Habit: 엑셀·개별검색 / Anxiety: 소비데이터 입력 |
+| Current Solutions | 카드고릴라·뱅크샐러드 개별 검색, 엑셀 수기 계산 |
+| Switch Triggers/Barriers | Trigger: 배우자와 신규카드 발급 논의 / Barrier: 직접입력 자체가 번거로움(§5.1) |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 4.0(C1-P2)·3.0(C1-P1), DOS 4.0·3.0(SAM 기준, MR 1.0 — 04단계 확인) |
+| Notes | F-04·F-05 실사용성 검증(OQ-27) |
+
+### 3.2 2순위 — 카드비교 중단자(이수민형 흡수)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 카드 혜택을 비교하려다 계산이 복잡하거나 신규카드 발급이 막힌 상황 |
+| Job Statement | 있는 카드만으로 최선의 결제 계획을 세우고 싶다 |
+| Desired Outcome | 계산 신뢰 확보 후 재도전 완료, 재이탈률 [X%] 이하 |
+| 4 Forces | Push: 신규카드 발급 거절(E1-P1) / Pull: 계산 신뢰 회복 기대 / Habit: 판매직원 안내 의존 / Anxiety: 계산 결과 불신(E1-P2) |
+| Current Solutions | 판매직원 안내에 의존, 비교 자체를 포기 |
+| Switch Triggers/Barriers | Trigger: 지인 추천으로 재도전 / Barrier: 낮은 신뢰 상태에서 시작 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 4.0(E1-P1)·3.0(E1-P2), DOS 1.2·0.9(SAM 기준, MR 0.3 잠정 — OQ-22) |
+| Notes | 신용제약 외 다른 중단 사유 비중 확인(OQ-32) |
+
+### 3.3 3순위 — 박준혁형(Adjacent)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 전세에서 자가로 입주하며 가전·가구를 새로 사야 하는 상황 |
+| Job Statement | 이사 비용 외의 불필요한 지출을 줄이고 싶다 |
+| Desired Outcome | [특정 시점]에 서비스가 먼저 지출계획 입력을 제안 |
+| 4 Forces | Push: 외부 신호 없어 스스로 시작해야 함(A1-P1) / Pull: 미래지출 입력형 차별점 / Habit: 뱅크샐러드 과거소비 기반 추천 / Anxiety: ⬜ 미관측 |
+| Current Solutions | 뱅크샐러드 카드추천(과거소비 기준) |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인(OQ-30) / Barrier: 트리거 채널 부재 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 3.2(A1-P1), DOS 1.2(SAM 기준, MR 0.4 잠정 — OQ-16) |
+| Notes | Market Relevance 실측이 Beachhead 재정의 여부를 좌우(OQ-31) |
+
+### 3.4 4순위 — 오세영형(시간부족)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 예식 2개월 전, 스드메와 혼수 준비를 동시에 진행하는 상황 |
+| Job Statement | 카드 비교에 시간을 쓰지 않고 빠르게 결정하고 싶다 |
+| Desired Outcome | 입력~결과 확인까지 [O분] 이내 |
+| 4 Forces | Push: 비교할 시간 자체가 부족(C3-P1) / Pull: 빠른 결과 제공 기대 / Habit: 판매직원 추천에 즉석 의존 / Anxiety: ⬜ 미관측 |
+| Current Solutions | 판매직원 추천에 즉석 의존 |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인 / Barrier: 소요 시간 자체 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 2.4(C3-P1), DOS 0.3(SAM 기준, MR 0.15 잠정) |
+| Notes | 입력 단계 축소가 이 유형에는 특히 중요 |
+
+### 3.5 5순위 — 한지수형(재정불안·소득 불규칙)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 소득이 불규칙한 프리랜서, 혼수 구매의 할부·일시불 여부 고민 |
+| Job Statement | 부담 없는 결제 스케줄을 짜고 싶다 |
+| Desired Outcome | 월별 상환 부담을 [특정 기준] 이하로 유지 |
+| 4 Forces | Push: 할부·무이자 조건에 민감(C4-P1) / Pull: 조건 비교 자동화 기대 / Habit: 무이자할부 검색을 개별 반복 / Anxiety: 소득 변동 반영 여부 |
+| Current Solutions | 무이자할부 검색을 개별로 반복 |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인 / Barrier: 소득 변동 시나리오 미반영 우려 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 1.8(C4-P1), DOS 0.15(SAM 기준, MR 0.15 잠정) |
+| Notes | 소득 변동 시나리오 기능 필요성 확인 |
+
+### 3.6 6순위 — 윤성민형(고급유저, 다카드 보유)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 카드 3장(카테고리별 특화) 보유, 조합 최적화에 관심 높은 상태 |
+| Job Statement | 보유 카드의 조합 효율을 극대화하고 싶다 |
+| Desired Outcome | 기존 수동 계산 대비 [X%] 더 나은 배분안 확인 |
+| 4 Forces | Push: 조합 최적화 니즈는 있으나 도구 없음(C5-P1) / Pull: 자동 배분 제시 / Habit: 카드사 앱 여러 개 오가며 수동 비교 / Anxiety: ⬜ 미관측 |
+| Current Solutions | 카드사 앱 여러 개를 오가며 수동 비교 |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인 / Barrier: 기존 지식 대비 차별성 부족 우려 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 1.8(C5-P1), DOS 0.15(SAM 기준, MR 0.15 잠정) |
+| Notes | 고급유저 대상 상위 기능(예: 자동 재조정) 필요성 확인 |
+
+### 3.7 7순위 — 최다인형(비혼 동거)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 비혼 동거 커플, 함께 살 집 입주로 가전·가구 공동구매 |
+| Job Statement | 두 사람 명의 카드를 함께 최적화하고 싶다 |
+| Desired Outcome | 공동 입력~공동 결정까지 [O단계] 이내 |
+| 4 Forces | Push: 혼인과 달리 참고정보 부족(A2-P1) / Pull: 공동관리 기능 기대 / Habit: 각자 카드로 나눠 결제 후 사후 정산 / Anxiety: ⬜ 미관측 |
+| Current Solutions | 각자 카드로 나눠 결제, 사후 정산 |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인 / Barrier: 법적 지위 차이로 인한 정보 부족 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 1.8(A2-P1), DOS 0.15(SAM 기준, MR 0.15 잠정) |
+| Notes | 공동 명의/공동 입력 기능 필요성 확인(OQ-24와 연결) |
+
+### 3.8 8순위 — 이건우형(이혼 재정착)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 이혼 후 재정착, 새 거처 마련으로 가전·가구 재구매 필요 |
+| Job Statement | 다시 시작하는 상황에서 손해를 줄이고 싶다 |
+| Desired Outcome | 예산 초과 없이 재구매 완료 |
+| 4 Forces | Push: 재구매 손해 우려(A3-P1) / Pull: 신뢰할 수 있는 계획 기대 / Habit: 정보 탐색 최소화, 급하게 구매 / Anxiety: 심리적 부담 |
+| Current Solutions | 정보 탐색을 최소화, 필요한 것만 급하게 구매 |
+| Switch Triggers/Barriers | Trigger: ⬜ 미확인 / Barrier: 탐색 자체를 꺼리는 심리 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 1.8(A3-P1), DOS 0.15(SAM 기준, MR 0.15 잠정) |
+| Notes | 심리적 부담 완화 UX 필요성 확인 |
+
+### 3.9 참고 — 최유리형(Non-user, 대조군)
+
+| 구분 | 내용 |
+|---|---|
+| Situation | 혼수비용을 부모가 지원 |
+| Job Statement | (약함) 번거로운 일 없이 무난하게 넘어가고 싶다 |
+| Desired Outcome | 해당 없음 — Job 자체가 약한 것이 특징 |
+| 4 Forces | Push: 거의 없음(N1-P1) / Pull: 없음 / Habit: 있는 카드로 결제 / Anxiety: 없음(무관심이 지배적) |
+| Current Solutions | 있는 카드로 결제, 비교 자체를 안 함 |
+| Switch Triggers/Barriers | Trigger: 없음(정의상) / Barrier: 문제 인식 자체가 없음 |
+| Evidence | ⚠️ 인터뷰 전 — 공란 |
+| Priority | AOS 0.0(N1-P1), DOS −0.4(SAM 기준, MR 0.1) |
+| Notes | 전환 전략은 "문제 해결"이 아니라 "손해 인지 유도"(사후 리포트 등)로 접근 |
+
+---
+
+## 4. 인터뷰 결과 → Outcome 목록 표 (사전 버전)
+
+실제 인터뷰 후 Importance·Satisfaction을 재실측하면 이 표를 갱신한다. 지금은 06단계 가설값을 그대로 넣어 둔다.
+
+| Outcome(측정 표현은 인터뷰 후 확정) | Persona | Importance | Satisfaction | AOS | MR(SAM 기준) | DOS | 증거 |
+|---|---|---|---|---|---|---|---|
+| 구매 목록 입력 후 [O분] 안에 카드별 배분안 확인 | 김지은형 | 5 | 1 | 4.0 | 1.0 | 4.0 | ⚠️ 공란 |
+| 모든 예정 지출을 [O건] 한 화면에서 확인 | 김지은형 | 5 | 2 | 3.0 | 1.0 | 3.0 | ⚠️ 공란 |
+| 신규발급 없이도 기존 카드로 [O%] 손해 절감 확인 | 중단자 | 5 | 1 | 4.0 | 0.3 | 1.2 | ⚠️ 공란 |
+| 계산 근거를 [O초] 안에 직접 확인 | 중단자 | 5 | 2 | 3.0 | 0.3 | 0.9 | ⚠️ 공란 |
+| [특정 시점]에 지출계획 입력을 먼저 제안받음 | 박준혁형 | 4 | 1 | 3.2 | 0.4 | 1.2 | ⚠️ 공란 |
+
+---
+
+## 5. 다음 단계
+
+이 카드는 **07-2 문항지로 실제 인터뷰를 수행한 뒤**, Evidence 칸에 인용·관찰 데이터를 채우고 Priority를 실측치로 갱신하는 용도로 그대로 재사용한다. 인터뷰 없이 이 카드의 공란을 임의로 채우지 않는다.
+
+## Open Questions
+
+| ID | 내용 |
+|---|---|
+| OQ-39 | 9개 카드 중 Evidence를 먼저 채울 순서 — 07-1의 우선순위(1→2→3→4~8→대조군)를 그대로 따를 것인가 |
