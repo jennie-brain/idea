@@ -5,6 +5,10 @@
 
 > **상태 표기** — ⚠️ **이 문서는 실제 인터뷰 결과 보고서가 아니다.** 인터뷰가 아직 수행되지 않았으므로, "Evidence"와 "실측 Priority"는 전부 빈칸이다. 나머지 필드(Situation·Job Statement·4 Forces 등)는 05~07단계에서 이미 확보한 가설(🟡)로 미리 채워, 실제 인터뷰가 끝나는 즉시 Evidence·Priority만 덧붙이면 되도록 준비했다.
 
+## 개요
+
+사용자가 제시한 결과 보고서 필드표·요약카드 예시를 방법론으로 정리하고, 07-2의 9개 대상자(1~8순위+Non-user 대조군) 전원에 대해 Situation·Job Statement·4 Forces·Priority(SAM 기준 AOS/DOS)까지 05~07단계 가설로 미리 채운 **사전 카드**를 만들었다. Evidence와 실측 Priority는 실제 인터뷰가 없는 한 채울 수 없어 전부 공란으로 남겼다.
+
 ### Decision Log
 
 | 날짜 | 결정 | 이유 |
