@@ -1,6 +1,6 @@
 # 01. Porter's Five Forces 모델 — 미래지출 결제설계 서비스
 
-> **분석 대상 기획서:** [`proposal/미래지출 결제설계 서비스 기획서 v0.1.md`](<../proposal/미래지출 결제설계 서비스 기획서 v0.1.md>)
+> **분석 대상 기획서:** [`proposal/미래지출 결제설계 서비스 기획서 v0.1.md`](<../../proposal/미래지출 결제설계 서비스 기획서 v0.1.md>)
 > **방법론 참고:** [business-analysis-frameworks/01_Porters_Five_Forces_모델/00_방법론.md](https://github.com/jennie-brain/business-analysis-frameworks/blob/main/01_Porters_Five_Forces_%EB%AA%A8%EB%8D%B8/00_%EB%B0%A9%EB%B2%95%EB%A1%A0.md)
 > **분석 기준일:** 2026-08-13
 > **작성자 / 팀:** JENNIE / AI-PM-study
